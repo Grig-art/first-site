@@ -205,8 +205,8 @@ span{
     max-width: 110px;
    
     font-size: 17px;
-    display: flex; /* поменяли на flex */
-    align-items: center;  /* вертикальное выравнивание по центру */
+    display: flex;
+    align-items: center;  
     position: relative;
     
 }
@@ -216,7 +216,7 @@ span{
     width: 174px;
     text-align: center;
     font-size: 17px;
-    display: inline-flex; /* поменяли на flex */
+    display: inline-flex; 
     align-items: center;  
     justify-content: center;
     
@@ -1000,11 +1000,6 @@ data{
     align-items: center;
     }
 
-    /* .book__left{
-        display: none;
-    }
-     */
-
 }
 
 
@@ -1030,6 +1025,110 @@ data{
     .footer__right{
         justify-content: space-between;
     }
+
+    .about__block{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header__container{
+        gap: 10px;
+        position: relative;
+       
+    }
+    .header__left{
+        order: 1;
+    }
+    .header__right{
+        order: 0;
+        max-width: 200px;
+    }
+
+    .header{
+       position: relative;
+       margin-top: 10px;
+    }
+    .menu{
+        text-align: center;
+    }
+
+    .menu__item{
+        display: block;
+        color: #F7F9FA;
+        padding-top: 50px;
+        transform: translateY(-415px);
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        width: 100%;
+        background-color: #007BFF;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 5;
+
+    }
+
+    .menu__lists{
+        font-size: 20px;
+           color: #F7F9FA;
+        padding-bottom: 45px;
+    }
+    .header__button{
+    position: relative;
+    display: block;
+    width: 43px;
+    height: 40px;
+    border: none;
+    z-index: 10;
+    margin: 5px;
+
+}
+.header__button span{
+    width: 45px;
+  height: 2px;
+  position: absolute;
+  
+    left: 0;
+    top: 0;
+  transform: rotate(0deg);
+  margin: 0 auto;
+  transition: .5s ease-in-out;
+  background-color: rgb(0, 0, 0);
+  
+}
+.header__button span:nth-child(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.header__button span:nth-child(2) {
+  top: 18px;
+  transform-origin: left center;
+}
+
+.header__button span:nth-child(3) {
+  top: 36px;
+  transform-origin: left center;
+}
+
+.header__button.open span:nth-child(1) {
+  transform: rotate(43deg);
+  top: 3px;
+  left: 5px;
+}
+
+.header__button.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.header__button.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 35px;
+  left: 3px;
+}
+ .menu__list--active{
+        transform: translateY(0);
+ }
+
 
 }
 
